@@ -57,7 +57,7 @@ def checkVictory(matrix):
 			if(matrix[i][i] == diag):#diag -> where line = column
 				equal+=1
 		if (equal == matSize):#diagonal filled
-			return diag +"Won"
+			return diag +" Ganhou "
 	#diagonal(BOTTOM-TOP)
 	equal = 0
 	diag2 = matrix[0][matSize-1]
@@ -66,7 +66,7 @@ def checkVictory(matrix):
 			if(matrix[i][matSize-1-i] == diag2):#sum(line,column) = matSize-1
 				equal+=1
 		if (equal == matSize):#diagonal filled
-			return diag2 +"Won"
+			return diag2 +" Ganhou "
 	#horizontal
 	for i in range(0,matSize):#line
 		equal = 0
@@ -75,8 +75,8 @@ def checkVictory(matrix):
 			for j in range(0,matSize):#column
 				if(matrix[i][j] == hor):
 					equal+=1
-			if (equal == matSize):#won horizontally 
-				return hor +"Won"
+			if (equal == matSize):# Ganhou  horizontally 
+				return hor +" Ganhou "
 	#vertical
 	for j in range(0,matSize):#column
 		equal = 0
@@ -85,8 +85,8 @@ def checkVictory(matrix):
 			for i in range(0,matSize):#line
 				if(matrix[i][j] == ver):
 					equal+=1
-			if (equal == matSize):#won vertically 
-				return ver +"Won"
+			if (equal == matSize):# Ganhou  vertically 
+				return ver +" Ganhou "
 	return False
 
 player1 = Jogador(1,"X")
