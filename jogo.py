@@ -117,10 +117,10 @@ while(done == 0):
 	if(done ==1 and answ != 1 and answ != 2):
 	    print("Oops! That's not a valid option. Only integers(1 or 2)")
 	    done = 0
-if(answ == 1):
+if(answ == 1):#player selected "x"
 	player1 = Jogador("X")
 	player2 = Jogador("O")
-else:
+else:#player selected "o"
 	player1 = Jogador("O")
 	player2 = Jogador("X")
 
